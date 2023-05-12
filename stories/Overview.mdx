@@ -1,0 +1,91 @@
+import {Meta} from "@storybook/blocks";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
+
+<Meta title="Design tokens/Overview" />
+
+# Design tokens
+
+Canada.ca Design Tokens are the fundamental visual design attributes of our design system, abstracted into reusable variables which are used to create consistent experiences. Each token stores a choice (like a reusable color), or a choice applied to a context (that color applied to a background or text). The system automates the transformation of tokens (stored in YAML) into platform specific formats for use directly in our projects.
+
+## How to use design tokens
+
+Design Tokens are the smallest building blocks of Canada.ca's Design System and represent values such as color, spacing, typography. Conceptually, Design Tokens are technology agnostic and are used instead of hard-coded values to enable:
+
+- common language between designers and developers
+- consistency across the Government of Canada products
+- flexibility
+- maintainability
+
+To advocate a common language between designers and developers Design Tokens are integrated to work seamlessly in our design platform (e.g. Figma) and component library. By using Design Tokens instead of hard-coded values we are able to change values in a single place without having to update all the usages manually.
+
+## Design Token Anatomy
+
+Each design token has a name, a value, optionally a description containing usage guidelines and design intentions, and a status indicating whether the design token is deprecated, embraced, in evaluation or endured.
+
+Here is an example of a color design token:
+
+<div class="sb-unstyled">
+  <div>
+    <div>
+      <div></div>
+    </div>
+    <div>
+      <span
+        data-size="size-300"
+        data-color="color-neutral-700">
+        color-primary-700
+        <span data-testid="tag"
+          aria-label="Embrace"
+          role="listitem"
+        >
+          <span class="">Embrace</span>
+        </span>
+      </span>
+      <span
+        data-size="size-200"
+        data-color="color-gray-700">
+        #006EEB
+      </span>
+      <span
+        data-size="size-200"
+        data-color="color-neutral-700">
+        Call to action color used for primary buttons and links. Reserve usages
+        to elements with interactions like clickable items and not for plain
+        text.
+      </span>
+      <div>
+        <span
+          data-size="size-200"
+          data-color="color-gray-700">
+          Contrast Ratio: 4.74:1
+        </span>
+        <svg
+          width="16px"
+          height="16px"
+          viewBox="0 0 24 24">
+          <g transform="rotate(0 12 12)">
+            <g
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              data-icon-type="fill"
+            >
+              <path
+                d="M16.5,15 L16.5,18 L7.5,18 L7.5,15 L16.5,15 Z M16.5,3 L16.5,15 L13.5,15 L13.5,3 L16.5,3 Z"
+                transform="rotate(45 12 10.5)"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
