@@ -1,10 +1,13 @@
-import GcHeader from '../app/elements/gc-header.mjs';
+import gcHeader from '../app/elements/gc-header.mjs';
 import enhance from '@enhance/ssr'
+
 const html = enhance({
   elements: {
-    'gc-header': GcHeader
+    'gc-header': gcHeader
   }
 })
+
+import { enhanceArgs } from './helpers/enhance.js'
 import "./css/theme.min.css";
 
 
@@ -12,22 +15,11 @@ import "./css/theme.min.css";
 export default {
   title: 'Components/GC-Header',
   tags: ['autodocs'],
-  render: (args) => GcHeader(args),
+  render: (args) => gcHeader( enhanceArgs( html, args ) ),
   argTypes: {
-    state: {
-      options: ['en', 'fr'],
-      mapping: {
-        en: {
-          attrs: {
-            variant: 'en'
-          }
-        },
-        fr: {
-          attrs: {
-            variant: 'fr'
-          }
-        },
-      },
+    locale: {
+      control: { type: "select" },
+      options: [ "en", "fr" ],
     }
   },
 };
@@ -35,22 +27,12 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/web-components/writing-stories/args
 export const English = {
   args: {
-    html,
-    state: {
-      attrs: {
-        variant: 'en'
-      }
-    }
+    locale: "en",
   },
 };
 
 export const Français = {
   args: {
-    html,
-    state: {
-      attrs: {
-        variant: 'fr'
-      }
-    }
+    locale: 'fr',
   },
 };
