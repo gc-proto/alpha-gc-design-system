@@ -5,26 +5,27 @@ We are researching the traits of successful design systems from the Storybook co
 ## What we’re building
 Storybook powers the design systems for BBC, Airbnb, IBM, GitHub, and hundreds more companies. The recommendations here are inspired by best practices and tools from the smartest teams. We’ll be building the following frontend stack:
 
-**Build components**
-- 📚 Storybook for UI component development and auto-generated docs
-- 🔧 Web Components for declarative component-centric UI
-- 💅 Styled-components for component-scoped styling
-- ✨ Prettier for automatic code formatting
+Component Development Stack:
+- **Storybook**: A comprehensive tool for developing UI components and generating auto-documented references.
+- **Enhance**: Provides a dependable foundation built on standards-based web platform features, allowing developers to create web applications that are lightweight, flexible, and future-proof.
+- **open-props**: Enables component-specific styling, keeping your styles neatly encapsulated.
+- **Prettier**: Automatically formats your code for a consistent and polished appearance.
 
-**Maintain the system**
-- 🚥 GitHub Actions for continuous integration
-- 📐 ESLint for JavaScript linting
-- ✅ Chromatic to catch visual bugs in components (by Storybook maintainers)
-- 📦 npm for distributing the library
-- 🛠 Auto for release management workflow
+System Maintenance:
+- **GitHub Actions**: Facilitates continuous integration to ensure a smooth development workflow.
+- **ESLint**: Performs JavaScript linting to catch potential errors and maintain code quality.
+- **Chromatic**: A tool endorsed by the Storybook maintainers that detects visual bugs in your components.
+- **npm**: The reliable choice for distributing your library.
+- **Auto**: Simplifies release management through an efficient workflow.
 
-**Storybook addons**
-- ♿ Accessibility to check for accessibility issues during development
-- 💥 Actions to QA click and tap interactions
-- 🎛 Controls to interactively adjust props to experiment with components
-- 📕 Docs for automatic documentation generation from stories
-- 🔍 Interactions for debugging component interactions
-- 🏎 Test-runner for automated component testing
+Storybook Add-ons:
+- **Accessibility**: Helps identify and resolve accessibility issues during the development process.
+- **Actions**: Allows for thorough quality assurance testing of click and tap interactions.
+- **Controls**: Empowers you to interactively adjust props and experiment with different component configurations.
+- **Docs**: Automatically generates comprehensive documentation based on your component stories.
+- **Interactions**: Facilitates debugging of component interactions.
+- **Localization**: A Storybook add-on specifically designed for working with HTML web components and providing localization capabilities.
+- **Test-runner**: Automates component testing for swift and reliable results.
 
 ## Understand the workflow
 Design systems are an investment in frontend infrastructure. In addition to showcasing how to use the technology above, this repo also focuses on core workflows that promote adoption and simplify maintenance. Wherever possible, manual tasks will be automated. Below are the activities we’ll encounter.

@@ -2,14 +2,16 @@
 /**
  * @type {import('@enhance/types').EnhanceElemFn}
  */
-export default function GcHeader({ html, state }) {
+export default function gcHeader({ html, state }) {
     const { attrs } = state;
-    const { variant } = attrs;
-    const altLang = variant === "en" ? "fr" : "en";
-    const language = variant === "en" ? "Français" : "English";
-    const logo = variant === "en" ? "https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" : "https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-fr.svg";
-    const searchPlacholder = variant === "en" ? "Search Canada.ca" : "Rechercher dans Canada.ca";
-    const breadcrumb = variant === "en" ? "You are here:" : "Vous êtes ici&nbsp;:"
+    const { locale } = attrs;
+    const altLang = locale === "en" ? "fr" : "en";
+    const language = locale === "en" ? "Français" : "English";
+    const logo = locale === "en" ? "https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" : "https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-fr.svg";
+    const searchPlacholder = locale === "en" ? "Search Canada.ca" : "Rechercher dans Canada.ca";
+    const breadcrumb = locale === "en" ? "You are here:" : "Vous êtes ici&nbsp;:";
+    const signin = locale === "en" ? "Sign in" : "Se connecter";
+
     return html`
     <header>
       <div id="wb-bnr" class="container">
@@ -55,10 +57,10 @@ export default function GcHeader({ html, state }) {
       <div class="container">
         <div class="row"><div class="col-xs-12">
           <section id="wb-so">
-            <h2 class="wb-inv">Sign in</h2>
+            <h2 class="wb-inv">${ signin }</h2>
             <a class="btn btn-primary custom wb-init wb-data-json-inited" href="../ircc/services/application/ircc-sign-in-demo.html" data-wb-json="{ &quot;url&quot;: &quot;#[contextual]/current/auth/link&quot;, &quot;type&quot;: &quot;attr&quot;, &quot;attr&quot;: &quot;href&quot; }" id="wb-auto-3">
-              <span class="visible-xs">Sign in</span>
-              <span class="hidden-xs wb-init wb-data-json-inited" data-json-replace="#[contextual]/current/auth/labelExtended" id="wb-auto-4">IRCC Sign in</span>
+              <span class="visible-xs">${ signin }</span>
+              <span class="hidden-xs wb-init wb-data-json-inited" data-json-replace="#[contextual]/current/auth/labelExtended" id="wb-auto-4">${ signin }</span>
             </a>
           </section>
         </div>
