@@ -2405,7 +2405,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Lato, sans-serif;
+    font-family: Lato, sans-serif !important;
     -webkit-font-variant-ligatures: no-common-ligatures;
     font-variant-ligatures: no-common-ligatures;
     font-weight: 700
@@ -15263,11 +15263,11 @@ ol-geolocate button {
     background-color: #355688
 }
 
-h1.gc-thickline {
+h1 {
     border-bottom: none
 }
 
-h1.gc-thickline::after {
+h1::after {
     border-bottom: .18em solid #af3c43;
     content: "";
     display: block;
