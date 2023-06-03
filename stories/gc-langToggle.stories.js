@@ -14,6 +14,9 @@ export default {
   title: 'Components/Language toggle',
   tags: ['autodocs'],
   render: (args) => gcLangToggle( enhanceArgs( html, args ) ),
+  parameters: {
+    layout: "centered"
+  },
   argTypes: {
     locale: {
       control: { type: "select" },

@@ -5,7 +5,8 @@
     "start": "npx enhance dev",
     "lint": "eslint ./app/**/*.mjs --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_1389771cdb78ef5"
   },
   "dependencies": {
     "@enhance/arc-plugin-enhance": "^6.0.1",
@@ -21,6 +22,7 @@
     "@storybook/html": "^7.0.12",
     "@storybook/html-vite": "^7.0.12",
     "@storybook/testing-library": "^0.1.0",
+    "chromatic": "^6.17.4",
     "eslint": "^8.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -42,5 +44,7 @@
       "sourceType": "module",
       "ecmaVersion": 2022
     }
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "alpha-gc-design-system@0.0.1"
 }
